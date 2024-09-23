@@ -2,6 +2,15 @@
 
 function flattenArray(arr) {
   // your code here
+  let flatArray = [];
+  flatArray = arr.flat(5);
+  return flatArray;
 }
 
-console.log(flattenArray([[1, 2], [3, 4], [5, [6, 7]]])) // [1, 2, 3, 4, 5, 6, 7]
+console.log(
+  flattenArray([
+    [1, 2],
+    [3, 4],
+    [5, [6, 7]],
+  ])
+); // [1, 2, 3, 4, 5, 6, 7]

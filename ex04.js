@@ -2,6 +2,16 @@
 
 function countOccurrences(arr) {
   // your code here
+  let count = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (count[arr[i]]) {
+      count[arr[i]] = count[arr[i]] + 1;
+    } else {
+      count[arr[i]] = 1;
+    }
+  }
+  return count;
 }
 
-console.log(countOccurrences(['apple', 'banana', 'apple'])) // { apple: 2, banana: 1 }
+console.log(countOccurrences(["apple", "banana", "apple"])); // { apple: 2, banana: 1 }

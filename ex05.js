@@ -2,6 +2,26 @@
 
 function groupByCategory(products) {
   // your code here
+  let group = {};
+  let category = "";
+
+  for (let i = 0; i < products.length; i++) {
+    category = products[i].category;
+
+    if (!group[category]) {
+      group[category] = [];
+    }
+
+    group[category].push(products[i]);
+  }
+
+  return group;
 }
 
-console.log(groupByCategory([{ name: 'Apple', category: 'Fruit' }, { name: 'Carrot', category: 'Vegetable' }, { name: 'Banana', category: 'Fruit' }])) // { Fruit: [{ name: 'Apple', category: 'Fruit' }, { name: 'Banana', category: 'Fruit' }], Vegetable: [{ name: 'Carrot', category: 'Vegetable' }] }
+console.log(
+  groupByCategory([
+    { name: "Apple", category: "Fruit" },
+    { name: "Carrot", category: "Vegetable" },
+    { name: "Banana", category: "Fruit" },
+  ])
+); // { Fruit: [{ name: 'Apple', category: 'Fruit' }, { name: 'Banana', category: 'Fruit' }], Vegetable: [{ name: 'Carrot', category: 'Vegetable' }] }
